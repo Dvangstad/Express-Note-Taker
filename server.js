@@ -26,14 +26,14 @@ app.get("*", (req, res) => {
 })
 
 app.post("/notes,", (req, res) => {
-    res.saveFile(path.join(__dirname, "./public/notes.html"))
+    res.sendFile(path.join(__dirname, "./public/notes.html"))
 })
 app.post("/api/notes", (req,res) => {
     res.json(db)
 })
 
 app.post("*", (req,res) => {
-    res.saveFile(path.join(__dirname, "./public/index.html"))
+    res.sendFile(path.join(__dirname, "./public/index.html"))
 })
 
 //listen to inputs
